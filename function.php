@@ -29,9 +29,10 @@ public function fetchdata()
     return $result;
     }
 //Data one record read Function
-public function fetchonerecord($userid)
+public function checkphonenumber($phnum)
     {
-    $oneresult=mysqli_query($this->dbh,"select * from tblusers where id=$userid");
+        //echo $phnum;
+    $oneresult=mysqli_query($this->dbh,"select * from tblusers where ContactNumber=$phnum");
     return $oneresult;
     }
 //Data updation Function

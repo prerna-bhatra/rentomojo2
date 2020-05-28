@@ -5,6 +5,7 @@ require('head.php')
 ?>
 <body>
 <div class="container" >
+	<h1>Add Contact Number</h1>
 <form name="insertrecord" method="post">
 <div class="row">
 <div class="col-md-4"><b>First Name</b>
@@ -24,7 +25,8 @@ require('head.php')
 </div>
 <div class="row" style="margin-top:1%">
 <div class="col-md-8">
-<input type="submit" name="insert" value="Submit">
+<input type="submit" name="insert" value="Submit" class="btn btn-info">
+<a href="index.php" class="btn btn-info">Cancel</a>
 </div>
 </div>
 </form>
@@ -42,6 +44,13 @@ $emailid=$_POST['emailid'];
 $contactno=$_POST['contactno'];
 $dob=$_POST['dob'];
 //Function Calling
+ if(! preg_match('/^[7-9][0-9]{9}+$/', $contactno))
+    {
+      echo "<script>alert('invalid phone number');</script>";
+
+    }
+    else
+    {
 $sql=$insertdata->insert($fname,$emailid,$contactno,$dob);
 if($sql)
 {
@@ -52,8 +61,9 @@ echo "<script>window.location.href='index.php'</script>";
 else
 {
 // Message for unsuccessfull insertion
-echo "<script>alert('Something went wrong. Please try again');</script>";
-echo "<script>window.location.href='index.php'</script>";
+echo "<script>alert('phone number aleardy exixts');</script>";
+
+}
 }
 }
 ?>

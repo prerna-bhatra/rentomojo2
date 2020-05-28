@@ -4,6 +4,8 @@
 require('head.php')
 ?>
 <body>
+	<div class="container">
+		<h4>My Contact List</h4>
 	<table id="example" class="display" style="width:100%">
         <thead>
             <tr>
@@ -41,11 +43,8 @@ require('head.php')
             </tr>
             
         </tbody>
-        <tfoot>
-            <tr>
-                <th>Name</th>
-            </tr>
-        </tfoot>
     </table>
+	 <a href="insert.php" >ADD New</a>
+</div>
 </body>
 </html>
