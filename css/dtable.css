@@ -6,6 +6,7 @@
 	padding: 80px 80px 80px 80px;
 }
 .container table{
+
 	border: 1px solid black;
 }
 table td #trash
@@ -21,5 +22,15 @@ table td #trash
 
 .phb
 {
-	font-size: 100px;
+	margin-bottom: 50px;
+	background: rgba(0,0,0,0.4);
+	font-size: 70px;
+	padding: 30px 30px 30px 30px;
+}
+
+#plus
+{
+	border:1px solid black;
+	color: white;
+	background: black;
 }

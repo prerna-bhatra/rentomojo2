@@ -35,10 +35,16 @@ public function checkphonenumber($phnum)
     $oneresult=mysqli_query($this->dbh,"select * from tblusers where ContactNumber=$phnum");
     return $oneresult;
     }
-//Data updation Function
-public function update($fname,$lname,$emailid,$contactno,$address,$userid)
+    public function fetchdataone($uid)
     {
-    $updaterecord=mysqli_query($this->dbh,"update  tblusers set FirstName='$fname',LastName='$lname',EmailId='$emailid',ContactNumber='$contactno',Address='$address' where id='$userid' ");
+        //echo $phnum;
+    $oneresult=mysqli_query($this->dbh,"select * from tblusers where id=$uid");
+    return $oneresult;
+    }
+//Data updation Function
+public function update($name,$dob,$email,$contactno,$uid)
+    {
+    $updaterecord=mysqli_query($this->dbh,"update  tblusers set FirstName='$name',EmailId='$email',ContactNumber='$contactno', DOB='$dob' where id='$uid' ");
     return $updaterecord;
     }
 //Data Deletion function Function

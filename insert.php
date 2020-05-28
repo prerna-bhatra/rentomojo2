@@ -17,10 +17,10 @@ require('head.php')
 </div>
 <div class="row">
 <div class="col-md-4"><b>Email id</b>
-<input type="email" name="emailid" class="form-control" required>
+<input type="email" name="emailid" class="form-control" >
 </div>
 <div class="col-md-4"><b>Contactno</b>
-<input type="text" name="contactno" class="form-control" maxlength="10" required>
+<input type="text" name="contactno" class="form-control" maxlength="10" >
 </div>
 </div>
 <div class="row" style="margin-top:1%">
@@ -55,7 +55,7 @@ $sql=$insertdata->insert($fname,$emailid,$contactno,$dob);
 if($sql)
 {
 // Message for successfull insertion
-echo "<script>alert('Record inserted successfully');</script>";
+echo "<script>alert('Saved');</script>";
 echo "<script>window.location.href='index.php'</script>";
 }
 else
