@@ -6,30 +6,30 @@ require('head.php')
 <body>
 <div class="container" >
 	<h1>Add Contact Number</h1>
-<form name="insertrecord" method="post">
-<div class="row">
-<div class="col-md-4"><b>First Name</b>
-<input type="text" name="firstname" class="form-control" required>
-</div>
-<div class="col-md-4"><b>DOB</b>
-<input type="date" name="dob" class="form-control" required>
-</div>
-</div>
-<div class="row">
-<div class="col-md-4"><b>Email id</b>
-<input type="email" name="emailid" class="form-control" >
-</div>
-<div class="col-md-4"><b>Contactno</b>
-<input type="text" name="contactno" class="form-control" maxlength="10" >
-</div>
-</div>
-<div class="row" style="margin-top:1%">
-<div class="col-md-8">
-<input type="submit" name="insert" value="Submit" class="btn btn-info">
-<a href="index.php" class="btn btn-info">Cancel</a>
-</div>
-</div>
-</form>
+			<form name="insertrecord" method="post">
+				<div class="row">
+					<div class="col-md-4"><b>First Name</b>
+						<input type="text" name="firstname" class="form-control" required>
+					</div>
+					<div class="col-md-4"><b>DOB</b>
+						<input type="date" name="dob" class="form-control" required>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4"><b>Email id</b>
+						<input type="email" name="emailid" class="form-control" >
+				</div>
+					<div class="col-md-4"><b>Contactno</b>
+						<input type="text" name="contactno" class="form-control" maxlength="10" >
+					</div>
+				</div>
+				<div class="row" style="margin-top:1%">
+					<div class="col-md-8">
+						<input type="submit" name="insert" value="Submit" class="btn btn-info">
+					<a href="index.php" class="btn btn-info">Cancel</a>
+				</div>
+				</div>
+			</form>
 </div>
 <?php
 // include database connection file

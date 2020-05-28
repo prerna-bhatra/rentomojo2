@@ -13,15 +13,24 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
  }
 }
 //Data Insertion Function
+    public function login($phnum)
+    {
+        $fetch=mysqli_query($this->dbh,"select * from user where phnum=$phnum");
+
+        return $fetch;
+
+    }
     public function insert($fname,$emailid,$contactno,$dob)
     {
-    $ret=mysqli_query($this->dbh,"insert into tblusers(FirstName,EmailId,ContactNumber,DOB) values('$fname','$emailid','$contactno','$dob')");
+        $usernum=$_SESSION['num'];
+    $ret=mysqli_query($this->dbh,"insert into tblusers(FirstName,EmailId,ContactNumber,DOB,usernum) values('$fname','$emailid','$contactno','$dob','$usernum')");
     return $ret;
     }
 //Data read Function
 public function fetchdata()
     {
-    $result=mysqli_query($this->dbh,"select * from tblusers");
+        $usernum=$_SESSION['num'];
+    $result=mysqli_query($this->dbh,"select * from tblusers where usernum=$usernum");
     return $result;
     }
 //Data one record read Function

@@ -8,6 +8,12 @@ require('function.php')
 <body>
 	<div class="container">
         <div class="phb">
+            <?php 
+            if(isset($_SESSION['num']))
+            {
+
+             ?>
+            
         <i class="fa fa-book "></i>
 		MY PHONE BOOK
         </div>
@@ -65,6 +71,11 @@ require('function.php')
             echo "<script>alert('not deleted');</script>";
         }
     }
+}
+else
+{
+   header("Location: login.php"); 
+}
 ?>
 
 
