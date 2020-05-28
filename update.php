@@ -6,6 +6,10 @@ require ('function.php');
 ?>
 <body>
 	<div class="container" >
+		<?php
+		if(isset($_SESSION['num']))
+            {  
+		?>
 		<h1>Edit Contact Details</h1>
 		<?php
 			$db=new DB_con();
@@ -60,6 +64,12 @@ require ('function.php');
 			echo "<script>window.location.href='index.php'</script>";
 		}
 	}
+}
+else if(!isset($_SESSION['num']))
+{
+    echo "<script>window.location.href='signup.php'</script>";
+  
+}
 ?>
 
 
