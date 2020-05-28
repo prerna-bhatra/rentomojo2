@@ -5,10 +5,13 @@ require('head.php');
 ?>
 <body>
 	<div class="container">
+		<h1>Login </h1>
 		<form method="POST" action="">
+			<label>Mobile Number</label>
 			<input type="text" name="phnum">
-			<input type="submit" name="login" value="submit">
+			<input type="submit" name="login" class="btn btn-info" value="login">
 		</form>
+		<a href="signup.php" class="btn btn-dark">Create Account</a>
 	</div>
 </body>
 </html>
@@ -28,5 +31,6 @@ if($fetch)
 	//echo $_SESSION['num'];
 }
 }
-
 ?>
+
+

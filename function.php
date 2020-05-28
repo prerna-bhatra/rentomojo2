@@ -16,14 +16,21 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
     public function login($phnum)
     {
         $fetch=mysqli_query($this->dbh,"select * from user where phnum=$phnum");
-
-        return $fetch;
+    return $fetch;
 
     }
+     public function signup($phnum)
+    {
+        
+        //echo $phnum;
+         $ret=mysqli_query($this->dbh,"insert into user(phnum) values('$phnum')");
+         return $ret;
+    }
+
     public function insert($fname,$emailid,$contactno,$dob)
     {
         $usernum=$_SESSION['num'];
-    $ret=mysqli_query($this->dbh,"insert into tblusers(FirstName,EmailId,ContactNumber,DOB,usernum) values('$fname','$emailid','$contactno','$dob','$usernum')");
+         $ret=mysqli_query($this->dbh,"insert into tblusers(FirstName,EmailId,ContactNumber,DOB,usernum) values('$fname','$emailid','$contactno','$dob','$usernum')");
     return $ret;
     }
 //Data read Function

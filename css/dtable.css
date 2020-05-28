@@ -19,6 +19,13 @@ table td #trash
 	margin-top: 200px;
 	float: right;
 }
+.phb #logout
+{
+	text-decoration: none;
+	font-size:20px;
+	color: black;
+	float: right;
+}
 
 .phb
 {
@@ -34,3 +41,4 @@ table td #trash
 	color: white;
 	background: black;
 }
+

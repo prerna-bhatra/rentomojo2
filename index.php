@@ -6,18 +6,17 @@ require('function.php')
 
 ?>
 <body>
-	<div class="container">
+    <div class="container">
         <div class="phb">
             <?php 
             if(isset($_SESSION['num']))
             {
-
              ?>
-            
         <i class="fa fa-book "></i>
-		MY PHONE BOOK
+        MY PHONE BOOK
+        <span><a href="logout.php" id="logout"><i class="fa fa-sign-out"></i>Logout</a></span>
         </div>
-	<table id="example" class="display" style="width:100%">
+    <table id="example" class="display" style="width:100%">
         <thead>
             <tr>
                 <th>Name</th>
@@ -72,9 +71,12 @@ require('function.php')
         }
     }
 }
-else
+else if(!isset($_SESSION['num']))
 {
-   header("Location: login.php"); 
+  
+   echo "<script>alert('phone number not found !Please create account');</script>";
+   echo "<script>window.location.href='signup.php'</script>";
+   // header("Location: loginsignup.php"); 
 }
 ?>
 
