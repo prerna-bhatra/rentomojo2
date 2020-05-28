@@ -5,10 +5,6 @@ require('head.php')
 ?>
 <body>
 <div class="container" >
-	<?php
-		if(isset($_SESSION['num']))
-            {  
-	?>
 	<h1>Add Contact Number</h1>
 			<form name="insertrecord" method="post">
 				<div class="row">
@@ -69,12 +65,6 @@ echo "<script>alert('phone number aleardy exixts');</script>";
 
 }
 }
-}
-}
-else if(!isset($_SESSION['num']))
-{
-    echo "<script>window.location.href='signup.php'</script>";
-  
 }
 ?>
 </body>

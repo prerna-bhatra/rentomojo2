@@ -29,15 +29,15 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
 
     public function insert($fname,$emailid,$contactno,$dob)
     {
-        $usernum=$_SESSION['num'];
-         $ret=mysqli_query($this->dbh,"insert into tblusers(FirstName,EmailId,ContactNumber,DOB,usernum) values('$fname','$emailid','$contactno','$dob','$usernum')");
+       // $usernum=$_SESSION['num'];
+         $ret=mysqli_query($this->dbh,"insert into tblusers(FirstName,EmailId,ContactNumber,DOB) values('$fname','$emailid','$contactno','$dob')");
     return $ret;
     }
 //Data read Function
 public function fetchdata()
     {
-        $usernum=$_SESSION['num'];
-    $result=mysqli_query($this->dbh,"select * from tblusers where usernum=$usernum");
+       // $usernum=$_SESSION['num'];
+    $result=mysqli_query($this->dbh,"select * from tblusers ");
     return $result;
     }
 //Data one record read Function
