@@ -54,6 +54,11 @@ require ('function.php');
 		$phnum=$_POST['contactno'];
 		$upd=new DB_con();
 		$upd2=$upd->update($name,$dob,$email,$phnum,$uid);
+		if($upd2)
+		{
+			echo "<script>alert('Contact Details Updated');</script>";
+			echo "<script>window.location.href='index.php'</script>";
+		}
 	}
 ?>
 
