@@ -1,4 +1,19 @@
 .container
 {
-	margin-top: 50px;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	border: 1px solid black;
+	padding: 80px 80px 80px 80px;
+}
+.container table{
+	border: 1px solid black;
+}
+table td #trash
+{
+	margin-left:50px;
+}
+.add
+{
+	margin-top: 200px;
+	float: right;
 }
