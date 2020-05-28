@@ -7,7 +7,10 @@ require('function.php')
 ?>
 <body>
 	<div class="container">
-		<h4>My Contact List</h4>
+        <div class="phb">
+        <i class="fa fa-book "></i>
+		MY PHONE BOOK
+        </div>
 	<table id="example" class="display" style="width:100%">
         <thead>
             <tr>
@@ -31,8 +34,8 @@ require('function.php')
                         <td><?php echo $row['EmailId']?></td>
                         <td><?php echo $row['ContactNumber']?></td>
                         <td><?php echo $row['DOB']?></td>
-                        <td><a href="#"><abbr title="Edit"><i class="fa fa-pencil "></i></abbr></a>
-                            <a id="trash"href="#"><abbr title="Delete"><i  class="fa fa-trash "></i></abbr></a></td>
+                        <td><a href="#"><abbr title="Edit" class="btn btn-success"><i class="fa fa-pencil "></i></abbr></a>
+                            <a id="trash" class="btn btn-danger" href="index.php?del=<?php echo $row['id'] ?>" onclick="return confirm('delete contact')"><abbr title="Delete"><i  class="fa fa-trash "></i></abbr></a></td>
 
                     </tr>    
                     <?php
@@ -46,3 +49,25 @@ require('function.php')
 </div>
 </body>
 </html>
+<?php  
+    if(isset($_GET['del']))
+    {
+        $rid=$_GET['del'];
+        $deld=new DB_con();
+        $del1=$deld->delete($rid);
+        if($del1)
+        {
+
+         echo "<script>alert('contatc deleted');</script>";
+        }
+        else
+        {
+            echo "<script>alert('not deleted');</script>";
+        }
+    }
+?>
+
+
+
+
+

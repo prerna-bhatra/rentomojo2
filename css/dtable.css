@@ -11,9 +11,15 @@
 table td #trash
 {
 	margin-left:50px;
+
 }
 .add
 {
 	margin-top: 200px;
 	float: right;
+}
+
+.phb
+{
+	font-size: 100px;
 }
